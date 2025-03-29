@@ -1,4 +1,6 @@
-
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 body {
     background-color: #121212;
     font-family: 'Poppins', sans-serif;
@@ -7,14 +9,15 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    padding: 0; 
 }
 
-.login-container {
+.login-container, .signup-container {
     background: #1e1e1e;
     padding: 2.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    width: 300px;
+    width: 320px; /* Slightly wider for better spacing */
     text-align: center;
 }
 
@@ -23,20 +26,30 @@ h2 {
     margin-bottom: 1rem;
 }
 
-input[type="text"], input[type="password"] {
+label {
+    color: #bbbbbb; /* Lighter text for labels */
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+input[type="text"], 
+input[type="password"] {
     width: 100%;
-    padding: 10px;
-    margin: 8px 0;
+    padding: 12px; /* Increased padding */
+    margin: 6px 0 12px 0; /* Better spacing */
     border: none;
     border-radius: 5px;
     background: #2a2a2a;
     color: white;
     outline: none;
+    font-size: 14px;
 }
 
 button {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: none;
     border-radius: 5px;
     background: #007bff;
@@ -44,6 +57,7 @@ button {
     font-size: 16px;
     cursor: pointer;
     transition: background 0.3s;
+    margin-top: 10px;
 }
 
 button:hover {
@@ -52,7 +66,8 @@ button:hover {
 
 p {
     color: #bbbbbb;
-    margin-top: 10px;
+    margin-top: 15px;
+    font-size: 14px;
 }
 
 a {
@@ -63,4 +78,23 @@ a {
 
 a:hover {
     color: #0056b3;
+}
+
+.signup-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s;
+    background: #28a745; /* Green signup button */
+}
+
+.signup-button:hover {
+    background: #218838;
 }
